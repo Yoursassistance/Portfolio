@@ -21,37 +21,68 @@ const ContactUs = () => {
       <HeaderTwo />
       <Box marginX="5%" marginY="3%">
         <Flex>
-          <Box>
+          <Box flex="1">
             <Text fontWeight="600" fontSize="20px">
               Contact us
             </Text>
-            <Text fontSize="14px">
+            <Text width="60%" fontSize="14px">
               Here is what our clients are saying about seedtime landscaping
               service
             </Text>
-            <Box>
-              <Text>
+            <Box padding="3% 0">
+              <Text width="70%" fontWeight="500" fontSize="32px">
                 Connecting Dreams to Landscapes: Reach Out to Seedtime
                 Landscaping for Your Vision to Blossom
               </Text>
-              <Text>
+              <Text width="70%">
                 We are eager to hear from you and find out how to make your
                 outdoor space glow.
               </Text>
             </Box>
-            <Box>
-              <Text>General Enquiries</Text>
-              <Input placeholder="Name" type="text" />
-              <Input placeholder="Phone Number" type="phone" />
-              <Input placeholder="Email address" type="email" />
-              <Input placeholder="Select Service" />
-              <Textarea placeholder="Message - Tell us about your project" />
-              <Input placeholder="How did you hear about us" />
-              <Button>Submit</Button>
+            <Box borderRadius="10px" padding="5%" backgroundColor="white">
+              <Text fontSize="28px" padding="3% 0">
+                General Enquiries
+              </Text>
+              <Input
+                marginY="2%"
+                padding="5% 2%"
+                placeholder="Name"
+                type="text"
+              />
+              <Input
+                marginY="2%"
+                padding="5% 2%"
+                placeholder="Phone Number"
+                type="phone"
+              />
+              <Input
+                marginY="2%"
+                padding="5% 2%"
+                placeholder="Email address"
+                type="email"
+              />
+              <Input
+                marginY="2%"
+                padding="5% 2%"
+                placeholder="Select Service"
+              />
+              <Textarea
+                marginY="2%"
+                height="140px"
+                placeholder="Message - Tell us about your project"
+              />
+              <Input
+                marginY="2%"
+                padding="5% 2%"
+                placeholder="How did you hear about us"
+              />
+              <Button backgroundColor="#017931" color="white" padding="5% 10%">
+                Submit
+              </Button>
             </Box>
           </Box>
 
-          <Box>
+          <Box flex="1" marginLeft="3%">
             <Image src={contactImg1} />
             <Image src={contactImg2} />
           </Box>

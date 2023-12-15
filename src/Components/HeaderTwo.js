@@ -1,8 +1,28 @@
-import { Box, Button, Flex, Image, Spacer, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Text } from "@chakra-ui/react";
 import React from "react";
 import logo from "../Assets/Svg/logoC.svg";
-import line from "../Assets/Svg/Line.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+const NavLinkWithLine = ({ to, children }) => {
+  return (
+    <Box marginX="5%" position="relative">
+      <Text fontSize="16px" fontWeight="600">
+        <NavLink
+          to={to}
+          style={({ isActive }) => {
+            return {
+              color: isActive ? "#017931" : "#002D3A",
+              borderBottom: isActive ? "2px solid #017931" : "none",
+              fontWeight: isActive ? "600" : "500",
+            };
+          }}
+        >
+          {children}
+        </NavLink>
+      </Text>
+    </Box>
+  );
+};
 
 const HeaderTwo = () => {
   return (
@@ -18,34 +38,12 @@ const HeaderTwo = () => {
         <Image width="20%" src={logo} />
       </Box>
 
-      <Flex flex="1" justifyContent="center">
-        <Box marginX="6%">
-          <Text color="#FFB445" fontSize="16px" fontWeight="600">
-            <Link to="/">Home</Link>
-          </Text>
-          <Image src={line} />
-        </Box>
-        <Box marginX="6%">
-          <Text fontSize="16px" fontWeight="600">
-            <Link to="/services">Services</Link>
-          </Text>
-        </Box>
-        <Box marginX="6%">
-          <Text fontSize="16px" fontWeight="600">
-            <Link to="/portfolio">Portfolio</Link>
-          </Text>
-        </Box>
-        <Box marginX="6%">
-          <Text fontSize="16px" fontWeight="600">
-            <Link to="/reviews">Reviews</Link>
-          </Text>
-        </Box>
-        <Box marginX="6%">
-          <Text fontSize="16px" fontWeight="600">
-            <Link to="/contact-us">Contact</Link>
-          </Text>
-        </Box>
-        
+      <Flex flex="1.5" justifyContent="center">
+        <NavLinkWithLine to="/">Home</NavLinkWithLine>
+        <NavLinkWithLine to="/services">Services</NavLinkWithLine>
+        <NavLinkWithLine to="/portfolio">Portfolio</NavLinkWithLine>
+        <NavLinkWithLine to="/reviews">Reviews</NavLinkWithLine>
+        <NavLinkWithLine to="/contact-us">Contact</NavLinkWithLine>
       </Flex>
 
       <Box flex="1">
