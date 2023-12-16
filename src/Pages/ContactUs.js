@@ -6,16 +6,30 @@ import {
   Button,
   Input,
   Textarea,
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import Footer from "../Components/Footer";
 import HeaderTwo from "../Components/HeaderTwo";
-import logoC from "../Assets/Svg/logoC.svg";
-import Responsive from "../Utilities/Carousel";
 import contactImg1 from "../Assets/Svg/contactImg1.svg";
 import contactImg2 from "../Assets/Svg/contactImg2.svg";
+import { useDisclosure } from "@chakra-ui/react";
+import caution from "../Assets/Svg/caution.svg";
+import success from "../Assets/Svg/successIcon.svg";
 
 const ContactUs = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const cancelRef = React.useRef();
+  const [submit, setSubmit] = useState(false);
+
+  const handleSubmit = () => {
+    setSubmit(true);
+  };
+
   return (
     <Box backgroundColor="#F0FFD0" color="#002D3A">
       <HeaderTwo />
@@ -25,7 +39,7 @@ const ContactUs = () => {
             <Text fontWeight="600" fontSize="20px">
               Contact us
             </Text>
-            <Text width="60%" fontSize="14px">
+            <Text width={{ base: "100%", md: "60%" }} fontSize="14px">
               Here is what our clients are saying about seedtime landscaping
               service
             </Text>
@@ -34,7 +48,7 @@ const ContactUs = () => {
                 Connecting Dreams to Landscapes: Reach Out to Seedtime
                 Landscaping for Your Vision to Blossom
               </Text>
-              <Text width="70%">
+              <Text width={{ base: "100%", md: "70%" }}>
                 We are eager to hear from you and find out how to make your
                 outdoor space glow.
               </Text>
@@ -44,45 +58,117 @@ const ContactUs = () => {
                 General Enquiries
               </Text>
               <Input
-                marginY="2%"
-                padding="5% 2%"
+                marginY={{ base: "5%", md: "2%" }}
+                padding={{ base: "8% 3%", md: "5% 2%" }}
                 placeholder="Name"
                 type="text"
               />
               <Input
-                marginY="2%"
-                padding="5% 2%"
+                marginY={{ base: "5%", md: "2%" }}
+                padding={{ base: "8% 3%", md: "5% 2%" }}
                 placeholder="Phone Number"
                 type="phone"
               />
               <Input
-                marginY="2%"
-                padding="5% 2%"
+                marginY={{ base: "5%", md: "2%" }}
+                padding={{ base: "8% 3%", md: "5% 2%" }}
                 placeholder="Email address"
                 type="email"
               />
               <Input
-                marginY="2%"
-                padding="5% 2%"
+                marginY={{ base: "5%", md: "2%" }}
+                padding={{ base: "8% 3%", md: "5% 2%" }}
                 placeholder="Select Service"
               />
               <Textarea
-                marginY="2%"
-                height="140px"
+                marginY={{ base: "5%", md: "2%" }}
+                height={{ base: "8% 3%", md: "140px" }}
                 placeholder="Message - Tell us about your project"
               />
               <Input
-                marginY="2%"
-                padding="5% 2%"
+                marginY={{ base: "5%", md: "2%" }}
+                padding={{ base: "8% 3%", md: "5% 2%" }}
                 placeholder="How did you hear about us"
               />
-              <Button backgroundColor="#017931" color="white" padding="5% 10%">
-                Submit
-              </Button>
+              <Box textAlign={{ base: "center", md: "left" }}>
+                <Button
+                  backgroundColor="#017931"
+                  color="white"
+                  padding={{ base: "9% 15%", md: "5% 10%" }}
+                  onClick={onOpen}
+                >
+                  Submit
+                </Button>
+              </Box>
             </Box>
           </Box>
 
-          <Box flex="1" marginLeft="3%">
+          <AlertDialog
+            motionPreset="slideInBottom"
+            leastDestructiveRef={cancelRef}
+            onClose={onClose}
+            isOpen={isOpen}
+            isCentered
+          >
+            <AlertDialogOverlay />
+
+            {submit ? (
+              <AlertDialogContent marginX="2%" paddingTop="5%">
+                <Flex flexDirection="column" alignItems="center">
+                  <Image width="20%" src={success} />
+                  <AlertDialogHeader textAlign="center">
+                    Success
+                  </AlertDialogHeader>
+                  <AlertDialogBody textAlign="center">
+                    Your inspection application has been sent successfully
+                  </AlertDialogBody>
+                  <Box padding="5% 0" textAlign="center">
+                    <Button
+                      onClick={onClose}
+                      color="white"
+                      backgroundColor="#017931"
+                      ml={3}
+                    >
+                      Return to Dashboard
+                    </Button>
+                  </Box>
+                </Flex>
+              </AlertDialogContent>
+            ) : (
+              <AlertDialogContent marginX="2%" paddingTop="5%">
+                <Flex flexDirection="column" alignItems="center">
+                  <Image width="20%" src={caution} />
+                  <AlertDialogHeader textAlign="center">
+                    Are you sure you want to submit
+                  </AlertDialogHeader>
+                  <AlertDialogBody textAlign="center">
+                    You can easily go make and make sure the information
+                    provided are correct.
+                  </AlertDialogBody>
+                  <Box padding="5% 0" textAlign="center">
+                    <Button
+                      backgroundColor="#FFB445"
+                      color="white"
+                      ref={cancelRef}
+                      onClick={onClose}
+                    >
+                      Back
+                    </Button>
+                    <Button
+                      onClick={handleSubmit}
+                      color="white"
+                      backgroundColor="#017931"
+                      ml={3}
+                    >
+                      Submit
+                    </Button>
+                  </Box>
+                </Flex>
+              </AlertDialogContent>
+            )}
+          </AlertDialog>
+
+          <Box display={{ base: "none", md: "block" }} flex="1" marginLeft="3%">
             <Image src={contactImg1} />
             <Image src={contactImg2} />
           </Box>

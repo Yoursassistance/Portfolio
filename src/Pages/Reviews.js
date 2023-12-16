@@ -6,13 +6,12 @@ import logoC from "../Assets/Svg/logoC.svg";
 import Responsive from "../Utilities/Carousel";
 
 const Reviews = () => {
-  
   return (
-    <Box backgroundColor="#002D3A" color="white">
+    <Box position="relative" backgroundColor="#002D3A" color="white">
       <HeaderTwo />
       <Box>
         <Box marginY="5%" textAlign="center">
-          <Text fontSize="32px" fontWeight="600">
+          <Text fontSize={{ md: "32px", base: "24px" }} fontWeight="600">
             Our Projects Portfolio
           </Text>
           <Text>
@@ -22,44 +21,28 @@ const Reviews = () => {
         </Box>
 
         <Box>
-
-        <Responsive />
-          {/* <Flex justifyContent="center">
-            {data.map((item, index) => (
-              <Box
-                onClick={handleProject}
-                marginY="2%"
-                marginX="2%"
-                key={index}
-              >
-                <Box
-                  borderRadius="10px"
-                  backgroundColor="white"
-                  width="505px"
-                  height="309px"
-                ></Box>
-
-                <Text>{item.title}</Text>
-                <Text>{item.description}</Text>
-              </Box>
-            ))}
-          </Flex> */}
+          <Responsive />
         </Box>
       </Box>
 
       <Box
-        marginX="15%"
+        marginX={{ base: "5%", md: "15%" }}
         marginY="5%"
         color="#002D3A"
         borderRadius="20px"
         backgroundColor="white"
       >
-        <Flex alignItems="center" justifyContent="center" paddingY="3%">
-          <Box marginRight="4%">
-            <Text fontSize="48px" fontWeight="600">
+        <Flex
+          flexDirection={{ base: "column", md: "row" }}
+          alignItems="center"
+          justifyContent="center"
+          paddingY={{ base: "7%", md: "3%" }}
+        >
+          <Box textAlign={{ base: "center", md: "left" }} marginRight="4%">
+            <Text fontSize={{ base: "22px", md: "48px" }} fontWeight="600">
               Have a project in mind?
             </Text>
-            <Text fontSize="24px" fontWeight="600">
+            <Text fontSize={{ base: "16px", md: "24px" }} fontWeight="600">
               Schedule a consult.
             </Text>
             <Button
@@ -71,9 +54,12 @@ const Reviews = () => {
               Contact Us
             </Button>
           </Box>
-          <Box>
-            <Image src={logoC} />
-          </Box>
+          <Flex
+            justifyContent={{ base: "center", md: "flex-start" }}
+            marginTop={{ base: "5%", md: "0" }}
+          >
+            <Image width={{ base: "30%", md: "70%" }} src={logoC} />
+          </Flex>
         </Flex>
       </Box>
       <Footer />

@@ -10,7 +10,7 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
 import logo from "../Assets/Svg/logoW.svg";
 import { NavLink } from "react-router-dom";
 import { useMediaQuery } from "@chakra-ui/react";
@@ -64,7 +64,16 @@ const NavLinkWithLine = ({ to, children }) => {
 };
 
 const Header = () => {
+  const [activeLink, setActiveLink] = useState("");
+
   const [isMobile] = useMediaQuery("(max-width: 768px)");
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+  };
+
+  const renderIcon = (normalIcon, activeIcon) => {
+    return activeLink === normalIcon ? activeIcon : normalIcon;
+  };
 
   return (
     <Box>
@@ -79,24 +88,49 @@ const Header = () => {
             </MenuButton>
             <MenuList height="fit-content" paddingY="5%" color="#002D3A">
               <MenuItem width="100%">
-                <Image src={HomeIconA} />
-                <NavLinkWithLine to="/">Home</NavLinkWithLine>
+                <Image src={renderIcon(HomeIconNA, HomeIconA)} />
+                <NavLinkWithLine
+                  to="/"
+                  onClick={() => handleLinkClick(HomeIconNA)}
+                >
+                  Home
+                </NavLinkWithLine>
               </MenuItem>
               <MenuItem width="100%">
-                <Image src={ServiceNA} />
-                <NavLinkWithLine to="/services">Services</NavLinkWithLine>
+                <Image src={renderIcon(ServiceNA, ServiceA)} />
+                <NavLinkWithLine
+                  to="/services"
+                  onClick={() => handleLinkClick(HomeIconNA)}
+                >
+                  Services
+                </NavLinkWithLine>
               </MenuItem>
               <MenuItem>
-                <Image src={PortfolioNA} />
-                <NavLinkWithLine to="/portfolio">Portfolio</NavLinkWithLine>
+                <Image src={renderIcon(PortfolioNA, PortfolioA)} />
+                <NavLinkWithLine
+                  to="/portfolio"
+                  onClick={() => handleLinkClick(HomeIconNA)}
+                >
+                  Portfolio
+                </NavLinkWithLine>
               </MenuItem>
               <MenuItem>
-                <Image src={ReviewsNA} />
-                <NavLinkWithLine to="/reviews">Reviews</NavLinkWithLine>
+                <Image src={renderIcon(ReviewsNA, ReviewsA)} />
+                <NavLinkWithLine
+                  to="/reviews"
+                  onClick={() => handleLinkClick(HomeIconNA)}
+                >
+                  Reviews
+                </NavLinkWithLine>
               </MenuItem>
               <MenuItem>
-                <Image src={ContactNA} />
-                <NavLinkWithLine to="/contact-us">Contact</NavLinkWithLine>
+                <Image src={renderIcon(ContactNA, ContactA)} />
+                <NavLinkWithLine
+                  to="/contact-us"
+                  onClick={() => handleLinkClick(HomeIconNA)}
+                >
+                  Contact
+                </NavLinkWithLine>
               </MenuItem>
               <Box textAlign="center">
                 <Button

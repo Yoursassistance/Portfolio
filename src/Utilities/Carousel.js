@@ -1,18 +1,19 @@
 import React from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Box, Flex, Image } from "@chakra-ui/react";
+import { Box, Flex, Image, useMediaQuery } from "@chakra-ui/react";
 import { Navigation, Pagination } from "swiper/modules";
-import left from "../Assets/Svg/carouselLeft.svg"
-import Right from "../Assets/Svg/carouselRight.svg"
+import left from "../Assets/Svg/carouselLeft.svg";
+import Right from "../Assets/Svg/carouselRight.svg";
 
 export default function Responsive() {
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+  const slidesPerView = isMobile ? 1 : 3;
   return (
-    <>
+    <Box zIndex="-1">
       <Swiper
-        slidesPerView={3}
+        slidesPerView={slidesPerView}
         spaceBetween={30}
         pagination={{
           clickable: true,
@@ -28,90 +29,90 @@ export default function Responsive() {
           <Box
             borderRadius="10px"
             backgroundColor="white"
-            width="505px"
+            width={{ base: "350px", md: "605px" }}
             height="309px"
-            marginX="10%"
+            marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box
             borderRadius="10px"
             backgroundColor="white"
-            width="505px"
+            width={{ base: "350px", md: "605px" }}
             height="309px"
-            marginX="10%"
+            marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box
             borderRadius="10px"
             backgroundColor="white"
-            width="505px"
+            width={{ base: "350px", md: "605px" }}
             height="309px"
-            marginX="10%"
+            marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box
             borderRadius="10px"
             backgroundColor="white"
-            width="505px"
+            width={{ base: "350px", md: "605px" }}
             height="309px"
-            marginX="10%"
+            marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box
             borderRadius="10px"
             backgroundColor="white"
-            width="505px"
+            width={{ base: "350px", md: "605px" }}
             height="309px"
-            marginX="10%"
+            marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box
             borderRadius="10px"
             backgroundColor="white"
-            width="505px"
+            width={{ base: "350px", md: "605px" }}
             height="309px"
-            marginX="10%"
+            marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box
             borderRadius="10px"
             backgroundColor="white"
-            width="505px"
+            width={{ base: "350px", md: "605px" }}
             height="309px"
-            marginX="10%"
+            marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box
             borderRadius="10px"
             backgroundColor="white"
-            width="505px"
+            width={{ base: "350px", md: "605px" }}
             height="309px"
-            marginX="10%"
+            marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
         <SwiperSlide>
           <Box
             borderRadius="10px"
             backgroundColor="white"
-            width="505px"
+            width={{ base: "350px", md: "605px" }}
             height="309px"
-            marginX="10%"
+            marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
       </Swiper>
       <Box marginY="3%" marginX="5%">
         <Flex justifyContent="flex-end">
-            <Image marginX="1%" src={left} />
-            <Image src={Right} />
+          <Image marginX="1%" src={left} />
+          <Image src={Right} />
         </Flex>
       </Box>
-    </>
+    </Box>
   );
 }

@@ -1,5 +1,13 @@
 import React from "react";
-import { Box, Flex, Text, Image, Button } from "@chakra-ui/react";
+import {
+  Box,
+  Flex,
+  Text,
+  Image,
+  Button,
+  useMediaQuery,
+  Spacer,
+} from "@chakra-ui/react";
 import serviceback from "../Assets/Svg/ServiceBackground.svg";
 import Header from "../Components/Header";
 import arrowDown from "../Assets/Svg/arrowDown.svg";
@@ -16,52 +24,107 @@ import si9 from "../Assets/Svg/si9.svg";
 import si10 from "../Assets/Svg/si10.svg";
 import Footer from "../Components/Footer";
 import logoC from "../Assets/Svg/logoC.svg";
-
+import mobileImg from "../Assets/Svg/serviceMobile.svg";
 
 const Service = () => {
+  const [isMobile] = useMediaQuery("(max-width: 768px)");
+
   return (
     <Box backgroundColor="#002D3A">
-      <Box
-        paddingX="5%"
-        paddingTop="2%"
-        height="800px"
-        backgroundImage={serviceback}
-        color="white"
-        backgroundRepeat="no-repeat"
-        backgroundSize="cover"
-      >
-        <Header />
-        <Flex flexDirection="column" paddingY="5%">
-          <Text fontSize="64px" fontWeight="600" color="white" width="60%">
-            “Nurturing Nature, Crafting Beauty:
-            <span
-              style={{
-                fontWeight: "400",
-                color: "#FFB445",
-                fontStyle: "italic",
-              }}
-            >
-              Your Landscape, Our Expertise.
-            </span>{" "}
-            ”
-          </Text>
-          <Text width="45%" fontSize="20px" color="#E0E0E0" marginLeft="7%">
-            “Explore our comprehensive landscaping services designed to
-            transform your outdoor space into a harmonious masterpiece. From
-            meticulous design to expert installation and dedicated care, we
-            bring your vision to life, creating a lush and inviting environment
-            tailored just for you.”
-          </Text>
-        </Flex>
-        <Box float="right">
-          <Image width="80%" src={arrowDown} />
-        </Box>
-      </Box>
+      {isMobile ? (
+        <Box paddingX="3%" paddingTop="2%" color="white">
+          <Header />
 
-      <Box paddingX="5%" paddingY="5%" backgroundColor="#F0FFD0">
+          <Flex alignItems="center">
+            <Image width="100%" src={mobileImg} />
+          </Flex>
+          <Flex flexDirection="column" paddingY="5%">
+            <Text fontSize="28px" fontWeight="600" color="white" width="100%">
+              “Nurturing Nature, Crafting Beauty:
+              <span
+                style={{
+                  fontWeight: "400",
+                  color: "#FFB445",
+                  fontStyle: "italic",
+                }}
+              >
+                Your Landscape, Our Expertise.
+              </span>{" "}
+              ”
+            </Text>
+            <Text width="90%" fontSize="14px" color="#E0E0E0" marginLeft="7%">
+              “Explore our comprehensive landscaping services designed to
+              transform your outdoor space into a harmonious masterpiece. From
+              meticulous design to expert installation and dedicated care, we
+              bring your vision to life, creating a lush and inviting
+              environment tailored just for you.”
+            </Text>
+          </Flex>
+          <Flex>
+            <Button
+              backgroundColor="#FFB445"
+              color="white"
+              borderRadius="10px"
+              paddingY="8%"
+              width="227px"
+              float="right"
+            >
+              Book an appointment
+            </Button>
+            <Spacer />
+            <Box float="right">
+              <Image width="60%" src={arrowDown} />
+            </Box>
+          </Flex>
+        </Box>
+      ) : (
+        <Box
+          paddingX="5%"
+          paddingTop="2%"
+          height="800px"
+          backgroundImage={serviceback}
+          color="white"
+          backgroundRepeat="no-repeat"
+          backgroundSize="cover"
+        >
+          <Header />
+          <Flex flexDirection="column" paddingY="5%">
+            <Text fontSize="64px" fontWeight="600" color="white" width="60%">
+              “Nurturing Nature, Crafting Beauty:
+              <span
+                style={{
+                  fontWeight: "400",
+                  color: "#FFB445",
+                  fontStyle: "italic",
+                }}
+              >
+                Your Landscape, Our Expertise.
+              </span>{" "}
+              ”
+            </Text>
+            <Text width="45%" fontSize="20px" color="#E0E0E0" marginLeft="7%">
+              “Explore our comprehensive landscaping services designed to
+              transform your outdoor space into a harmonious masterpiece. From
+              meticulous design to expert installation and dedicated care, we
+              bring your vision to life, creating a lush and inviting
+              environment tailored just for you.”
+            </Text>
+          </Flex>
+          <Box float="right">
+            <Image width="80%" src={arrowDown} />
+          </Box>
+        </Box>
+      )}
+
+      <Box
+        marginTop={{ base: "10%", md: "0" }}
+        paddingX="5%"
+        paddingY="5%"
+        backgroundColor="#F0FFD0"
+      >
         <Box textAlign="center">
-          <Text fontSize="32px" fontWeight="600">
-            Seedtime Landscaping Service
+          <Text fontWeight="600" fontSize={{ base: "20px", md: "32px" }}>
+            Seedtime landscaping
           </Text>
           <Text>
             Craft a vision for your outdoor sanctuary with our meticulous
@@ -69,53 +132,78 @@ const Service = () => {
           </Text>
         </Box>
 
-        <Flex alignItems="center" paddingY="5%">
+        <Flex
+          flexDirection={{ base: "column", md: "row" }}
+          alignItems="center"
+          paddingY="5%"
+        >
           <Box flex="1">
             <Image src={servicePageImg1} />
           </Box>
-          <Box marginLeft="3%" flex="1">
+          <Box marginLeft={{ base: "0", md: "3%" }} flex="1">
             <Text
               margin="2% 0"
-              width="80%"
-              fontSize="40px"
+              width={{ base: "100%", md: "80%" }}
+              fontSize={{ base: "26px", md: "40px" }}
               fontWeight="600"
               color="#017931"
+              textAlign={{ base: "center", md: "left" }}
             >
               We believe in things well crafted and designed
             </Text>
-            <Text width="80%">
+            <Text
+              textAlign={{ base: "center", md: "left" }}
+              marginTop="2%"
+              width={{ base: "100%", md: "80%" }}
+            >
               From our meticulous woodwork and custom furniture to carefully
               selected plants and quality materials, we take pride in every
               detail. Our dedication extends to sourcing plants from top
               nurseries, using premium natural materials, and selecting
               furnishings with a keen eye for craft and design.{" "}
             </Text>
-            <Button
-              margin="2% 0"
-              backgroundColor="#017931"
-              padding="4% 6%"
-              fontWeight="400"
-              color="white"
+            <Flex
+              width="100%"
+              justifyContent={{ base: "center", md: "flex-start" }}
             >
-              Book an inspection
-            </Button>
+              <Button
+                fontSize="16px"
+                fontWeight="500"
+                borderRadius="10px"
+                backgroundColor="#017931"
+                color="white"
+                paddingX="5%"
+                paddingY={{ base: "7%", md: "4%" }}
+                marginTop="2%"
+              >
+                Book and Inspection
+              </Button>
+            </Flex>
           </Box>
         </Flex>
 
-        <Box paddingX="5%" paddingY="5%" backgroundColor="#F0FFD0">
+        <Box
+          paddingX={{ base: "0", md: "5%" }}
+          paddingY="5%"
+          backgroundColor="#F0FFD0"
+        >
           <Box textAlign="center" paddingY="5%">
-            <Text fontSize="32px" fontWeight="600">
+            <Text fontSize={{ base: "24px", md: "32px" }} fontWeight="600">
               Our core services
             </Text>
             <Text>Explore our core landscaping services</Text>
           </Box>
 
-          <Flex alignItems="center">
+          <Flex
+            flexDirection={{ base: "column", md: "row" }}
+            alignItems="center"
+            color="#002D3A"
+          >
             <Box flex="1" marginRight="2%">
               <Image src={si1} />
             </Box>
             <Box flex="1">
-              <Text marginBottom="2%" fontSize="20px" fontWeight="600">
+              <Text marginY="2%" fontSize="20px" fontWeight="600">
                 Landscape and maintenance service
               </Text>
               <Box>
@@ -165,7 +253,7 @@ const Service = () => {
               <Button
                 margin="2% 0"
                 backgroundColor="#017931"
-                padding="4% 6%"
+                padding={{ md: "4% 6%", base: "7% 6%" }}
                 fontWeight="400"
                 color="white"
               >
@@ -174,9 +262,13 @@ const Service = () => {
             </Box>
           </Flex>
 
-          <Flex alignItems="center" paddingY="5%">
+          <Flex
+            flexDirection={{ base: "column-reverse", md: "row" }}
+            alignItems="center"
+            paddingY="5%"
+          >
             <Box flex="1">
-              <Text marginBottom="2%" fontSize="20px" fontWeight="600">
+              <Text marginY="2%" fontSize="20px" fontWeight="600">
                 Soft scalping and Mulching
               </Text>
               <Box>
@@ -209,24 +301,27 @@ const Service = () => {
               <Button
                 margin="2% 0"
                 backgroundColor="#017931"
-                padding="4% 6%"
+                padding={{ md: "4% 6%", base: "7% 6%" }}
                 fontWeight="400"
                 color="white"
               >
                 Book an inspection
               </Button>
             </Box>
-            <Box marginLeft="3%" flex="1">
+            <Box marginLeft={{ base: "0 ", md: "3%" }} flex="1">
               <Image src={si2} />
             </Box>
           </Flex>
 
-          <Flex alignItems="center">
-            <Box marginRight="3%" flex="1">
+          <Flex
+            flexDirection={{ base: "column", md: "row" }}
+            alignItems="center"
+          >
+            <Box marginRight={{ base: "0", md: "3%" }} flex="1">
               <Image src={si3} />
             </Box>
             <Box flex="1">
-              <Text marginBottom="2%" fontSize="20px" fontWeight="600">
+              <Text marginY="2%" fontSize="20px" fontWeight="600">
                 Tree Pruning
               </Text>
               <Box>
@@ -273,7 +368,7 @@ const Service = () => {
               <Button
                 margin="2% 0"
                 backgroundColor="#017931"
-                padding="4% 6%"
+                padding={{ md: "4% 6%", base: "7% 6%" }}
                 fontWeight="400"
                 color="white"
               >
@@ -282,9 +377,13 @@ const Service = () => {
             </Box>
           </Flex>
 
-          <Flex alignItems="center" paddingY="5%">
+          <Flex
+            flexDirection={{ base: "column-reverse", md: "row" }}
+            alignItems="center"
+            paddingY="5%"
+          >
             <Box flex="1">
-              <Text marginBottom="2%" fontSize="20px" fontWeight="600">
+              <Text marginY="2%" fontSize="20px" fontWeight="600">
                 Rubbish Removal
               </Text>
               <Box>
@@ -329,24 +428,27 @@ const Service = () => {
               <Button
                 margin="2% 0"
                 backgroundColor="#017931"
-                padding="4% 6%"
+                padding={{ md: "4% 6%", base: "7% 6%" }}
                 fontWeight="400"
                 color="white"
               >
                 Book an inspection
               </Button>
             </Box>
-            <Box marginLeft="3%" flex="1">
+            <Box marginLeft={{ md: "3%", base: "0" }} flex="1">
               <Image src={si4} />
             </Box>
           </Flex>
 
-          <Flex alignItems="center">
-            <Box marginRight="3%" flex="1">
+          <Flex
+            flexDirection={{ base: "column", md: "row" }}
+            alignItems="center"
+          >
+            <Box marginRight={{ base: "0", md: "3%" }} flex="1">
               <Image src={si5} />
             </Box>
             <Box flex="1">
-              <Text marginBottom="2%" fontSize="20px" fontWeight="600">
+              <Text marginY="2%" fontSize="20px" fontWeight="600">
                 High Pressure Cleaning
               </Text>
               <Box>
@@ -393,7 +495,7 @@ const Service = () => {
               <Button
                 margin="2% 0"
                 backgroundColor="#017931"
-                padding="4% 6%"
+                padding={{ md: "4% 6%", base: "7% 6%" }}
                 fontWeight="400"
                 color="white"
               >
@@ -402,9 +504,13 @@ const Service = () => {
             </Box>
           </Flex>
 
-          <Flex alignItems="center" paddingY="5%">
+          <Flex
+            flexDirection={{ base: "column-reverse", md: "row" }}
+            alignItems="center"
+            paddingY="5%"
+          >
             <Box flex="1">
-              <Text marginBottom="2%" fontSize="20px" fontWeight="600">
+              <Text marginY="2%" fontSize="20px" fontWeight="600">
                 Fencing
               </Text>
               <Box>
@@ -462,24 +568,27 @@ const Service = () => {
               <Button
                 margin="2% 0"
                 backgroundColor="#017931"
-                padding="4% 6%"
+                padding={{ md: "4% 6%", base: "7% 6%" }}
                 fontWeight="400"
                 color="white"
               >
                 Book an inspection
               </Button>
             </Box>
-            <Box marginLeft="3%" flex="1">
+            <Box marginLeft={{ base: "0", md: "3%" }} flex="1">
               <Image src={si6} />
             </Box>
           </Flex>
 
-          <Flex alignItems="center">
-            <Box flex="1" marginRight="3%">
+          <Flex
+            flexDirection={{ base: "column", md: "row" }}
+            alignItems="center"
+          >
+            <Box flex="1" marginRight={{ base: "0", md: "3%" }}>
               <Image src={si7} />
             </Box>
             <Box flex="1">
-              <Text marginBottom="2%" fontSize="20px" fontWeight="600">
+              <Text marginY="2%" fontSize="20px" fontWeight="600">
                 Concreating
               </Text>
               <Box>
@@ -528,7 +637,7 @@ const Service = () => {
               <Button
                 margin="2% 0"
                 backgroundColor="#017931"
-                padding="4% 6%"
+                padding={{ md: "4% 6%", base: "7% 6%" }}
                 fontWeight="400"
                 color="white"
               >
@@ -537,9 +646,13 @@ const Service = () => {
             </Box>
           </Flex>
 
-          <Flex alignItems="center" paddingY="5%">
+          <Flex
+            flexDirection={{ base: "column-reverse", md: "row" }}
+            alignItems="center"
+            paddingY="5%"
+          >
             <Box flex="1">
-              <Text marginBottom="2%" fontSize="20px" fontWeight="600">
+              <Text marginY="2%" fontSize="20px" fontWeight="600">
                 Paving
               </Text>
               <Box>
@@ -588,24 +701,27 @@ const Service = () => {
               <Button
                 margin="2% 0"
                 backgroundColor="#017931"
-                padding="4% 6%"
+                padding={{ md: "4% 6%", base: "7% 6%" }}
                 fontWeight="400"
                 color="white"
               >
                 Book an inspection
               </Button>
             </Box>
-            <Box marginLeft="3%" flex="1">
+            <Box marginLeft={{ base: "0", md: "3%" }} flex="1">
               <Image src={si8} />
             </Box>
           </Flex>
 
-          <Flex alignItems="center">
+          <Flex
+            flexDirection={{ base: "column", md: "row" }}
+            alignItems="center"
+          >
             <Box flex="1">
               <Image src={si9} />
             </Box>
             <Box flex="1">
-              <Text marginBottom="2%" fontSize="20px" fontWeight="600">
+              <Text marginY="2%" fontSize="20px" fontWeight="600">
                 Retaining Wall
               </Text>
               <Box>
@@ -654,7 +770,7 @@ const Service = () => {
               <Button
                 margin="2% 0"
                 backgroundColor="#017931"
-                padding="4% 6%"
+                padding={{ md: "4% 6%", base: "7% 6%" }}
                 fontWeight="400"
                 color="white"
               >
@@ -663,9 +779,13 @@ const Service = () => {
             </Box>
           </Flex>
 
-          <Flex alignItems="center" paddingY="5%">
+          <Flex
+            flexDirection={{ base: "column-reverse", md: "row" }}
+            alignItems="center"
+            paddingY="5%"
+          >
             <Box flex="1">
-              <Text marginBottom="2%" fontSize="20px" fontWeight="600">
+              <Text marginY="2%" fontSize="20px" fontWeight="600">
                 Garden Makeover and Upgrades
               </Text>
               <Box>
@@ -714,31 +834,55 @@ const Service = () => {
               <Button
                 margin="2% 0"
                 backgroundColor="#017931"
-                padding="4% 6%"
+                padding={{ md: "4% 6%", base: "7% 6%" }}
                 fontWeight="400"
                 color="white"
               >
                 Book an inspection
               </Button>
             </Box>
-            <Box flex="1" marginLeft="3%">
+            <Box flex="1" marginLeft={{ base: "0", md: "3%" }}>
               <Image src={si10} />
             </Box>
           </Flex>
         </Box>
-
       </Box>
 
-      <Box marginX="15%" marginY="5%" color="#002D3A" borderRadius="20px" backgroundColor="white">
-        <Flex alignItems="center" justifyContent="center" paddingY="3%">
-            <Box marginRight="4%">
-                <Text fontSize="48px" fontWeight="600">Have a project in mind?</Text>
-                <Text fontSize="24px" fontWeight="600">Schedule a consult.</Text>
-                <Button backgroundColor="#09AD00" color="white" padding="7% 15%" marginTop="2%">Contact Us</Button>
-            </Box>
-            <Box>
-                <Image src={logoC} />
-            </Box>
+      <Box
+        marginX={{ base: "5%", md: "15%" }}
+        marginY="5%"
+        color="#002D3A"
+        borderRadius="20px"
+        backgroundColor="white"
+      >
+        <Flex
+          flexDirection={{ base: "column", md: "row" }}
+          alignItems="center"
+          justifyContent="center"
+          paddingY={{ base: "7%", md: "3%" }}
+        >
+          <Box textAlign={{ base: "center", md: "left" }} marginRight="4%">
+            <Text fontSize={{ base: "22px", md: "48px" }} fontWeight="600">
+              Have a project in mind?
+            </Text>
+            <Text fontSize={{ base: "16px", md: "24px" }} fontWeight="600">
+              Schedule a consult.
+            </Text>
+            <Button
+              backgroundColor="#09AD00"
+              color="white"
+              padding="7% 15%"
+              marginTop="2%"
+            >
+              Contact Us
+            </Button>
+          </Box>
+          <Flex
+            justifyContent={{ base: "center", md: "flex-start" }}
+            marginTop={{ base: "5%", md: "0" }}
+          >
+            <Image width={{ base: "30%", md: "70%" }} src={logoC} />
+          </Flex>
         </Flex>
       </Box>
 

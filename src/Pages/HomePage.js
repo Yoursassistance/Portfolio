@@ -107,6 +107,7 @@ const HomePage = () => {
           </Box>
         </Box>
       )}
+
       {isMobile && (
         <Box
           backgroundColor="#F0FFD0"
@@ -118,6 +119,7 @@ const HomePage = () => {
           <Text color="#002D3A">Seedtime Process</Text>
         </Box>
       )}
+      
       <Flex
         flexDirection={{ base: "column", md: "row" }}
         paddingX="5%"
