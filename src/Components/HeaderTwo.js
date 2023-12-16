@@ -50,8 +50,8 @@ const NavLinkWithLine = ({ to, children }) => {
             to={to}
             style={({ isActive }) => {
               return {
-                color: isActive ? "#FFB445" : "white",
-                borderBottom: isActive ? "2px solid #FFB445" : "none",
+                color: isActive ? "#017931" : "#002D3A",
+                borderBottom: isActive ? "2px solid #017931" : "none",
                 fontWeight: isActive ? "600" : "500",
               };
             }}

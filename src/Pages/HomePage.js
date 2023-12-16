@@ -119,7 +119,7 @@ const HomePage = () => {
           <Text color="#002D3A">Seedtime Process</Text>
         </Box>
       )}
-      
+
       <Flex
         flexDirection={{ base: "column", md: "row" }}
         paddingX="5%"
@@ -159,11 +159,11 @@ const HomePage = () => {
         >
           <Flex
             width="90%"
-            flexDirection={{ base: "column", md: "column-reverse" }}
+            flexDirection={{ base: "column", md: "column" }}
           >
             <Flex
-              justifyContent="flex-start"
-              width={{ base: "100%", md: "70%" }}
+              justifyContent="center"
+              width={{ base: "100%", md: "50%" }}
             >
               <Image marginRight="5px" src={dot} />
               <Text textAlign="left" fontSize="20px" fontWeight="600">

@@ -30,7 +30,7 @@ export default function Responsive() {
             borderRadius="10px"
             backgroundColor="white"
             width={{ base: "350px", md: "605px" }}
-            height="309px"
+            height="359px"
             marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
@@ -39,7 +39,7 @@ export default function Responsive() {
             borderRadius="10px"
             backgroundColor="white"
             width={{ base: "350px", md: "605px" }}
-            height="309px"
+            height="359px"
             marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
@@ -48,7 +48,7 @@ export default function Responsive() {
             borderRadius="10px"
             backgroundColor="white"
             width={{ base: "350px", md: "605px" }}
-            height="309px"
+            height="359px"
             marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
@@ -57,7 +57,7 @@ export default function Responsive() {
             borderRadius="10px"
             backgroundColor="white"
             width={{ base: "350px", md: "605px" }}
-            height="309px"
+            height="359px"
             marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
@@ -66,7 +66,7 @@ export default function Responsive() {
             borderRadius="10px"
             backgroundColor="white"
             width={{ base: "350px", md: "605px" }}
-            height="309px"
+            height="359px"
             marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
@@ -75,7 +75,7 @@ export default function Responsive() {
             borderRadius="10px"
             backgroundColor="white"
             width={{ base: "350px", md: "605px" }}
-            height="309px"
+            height="359px"
             marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
@@ -84,7 +84,7 @@ export default function Responsive() {
             borderRadius="10px"
             backgroundColor="white"
             width={{ base: "350px", md: "605px" }}
-            height="309px"
+            height="359px"
             marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
@@ -93,7 +93,7 @@ export default function Responsive() {
             borderRadius="10px"
             backgroundColor="white"
             width={{ base: "350px", md: "605px" }}
-            height="309px"
+            height="359px"
             marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>
@@ -102,7 +102,7 @@ export default function Responsive() {
             borderRadius="10px"
             backgroundColor="white"
             width={{ base: "350px", md: "605px" }}
-            height="309px"
+            height="359px"
             marginX={{ base: "5%", md: "10%" }}
           ></Box>
         </SwiperSlide>

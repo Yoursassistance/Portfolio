@@ -123,7 +123,7 @@ const Portfolio = () => {
                   marginY="2%"
                   marginX={{ base: "5px", md: "2%" }}
                   key={index}
-                  width={{ base: "45%", md: "100%" }}
+                  width={{ base: "45%", md: "25%" }}
                 >
                   <Box
                     borderRadius="10px"
