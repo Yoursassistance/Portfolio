@@ -33,8 +33,8 @@ function App() {
           <Route element={<HomePage />} path="/" />
           {/* <Route element={<Service />} path="services" /> */}
           <Route element={<Portfolio />} path="portfolio" />
-          {/* <Route element={<Reviews />} path="reviews" /> */}
-          {/* <Route element={<ContactUs />} path="contact-us" /> */}
+          <Route element={<Reviews />} path="reviews" />
+          <Route element={<ContactUs />} path="contact-us" />
         </Routes>
       </Router>
     </ChakraProvider>
