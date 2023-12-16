@@ -19,20 +19,23 @@ const Footer = () => {
       paddingTop="5%"
       paddingBottom="2%"
     >
-      <Flex paddingX="3%">
+      <Flex flexDirection={{ base: "column", md: "row" }} paddingX="3%">
         <Box flex="1">
-          <Text fontSize="48px" fontWeight="600">
+          <Text fontSize={{ base: "22px", md: "48px" }} fontWeight="600">
             Sign up for our newsletter
           </Text>
-          <Text width="80%" fontSize="20px">
+          <Text
+            width={{ base: "100%", md: "80%" }}
+            fontSize={{ base: "16px", md: "20px" }}
+          >
             Stay up to date with what’s happening and see our recent works and
             projects
           </Text>
         </Box>
 
-        <Box flex="1">
+        <Box marginTop={{ base: "5%", md: "0" }} flex="1">
           <Input
-            padding="4%"
+            padding={{ base: "7% 4%", md: "4%" }}
             borderRadius="10px"
             border="1px solid #017931"
             placeholder="Email address"
@@ -51,19 +54,23 @@ const Footer = () => {
 
       <Image width="100%" marginTop="3%" src={line} />
 
-      <Flex marginTop="3%" marginX="3%">
+      <Flex
+        flexDirection={{ base: "column", md: "row" }}
+        marginTop="3%"
+        marginX="3%"
+      >
         <Box flex="1">
-          <Image width="20%" src={logoC} />
-          <Text fontSize="20px" fontWeight="600">
+          <Image marginBottom="5%" width="20%" src={logoC} />
+          <Text fontSize={{ base: "16px", md: "20px" }} fontWeight="600">
             PO Box 26, Strathpine Qld, 4500
           </Text>
-          <Text fontSize="20px" fontWeight="600">
+          <Text fontSize={{ base: "16px", md: "20px" }} fontWeight="600">
             (04)02840482
           </Text>
-          <Text fontSize="20px" fontWeight="600">
+          <Text fontSize={{ base: "16px", md: "20px" }} fontWeight="600">
             seedtime.landscape@gmail.com
           </Text>
-          <Flex marginTop="2%">
+          <Flex marginTop={{ base: "5%", md: "2%" }}>
             <Image marginRight="2%" src={facebook} />
             <Image marginRight="2%" src={instagram} />
             <Image marginRight="2%" src={youtube} />
@@ -73,32 +80,36 @@ const Footer = () => {
           </Flex>
         </Box>
 
-        <Flex flex="1">
+        <Flex
+          marginTop={{ base: "5%", md: "0" }}
+          flexDirection={{ base: "column", md: "row" }}
+          flex="1"
+        >
           <Box flex="1">
             <Text fontSize="20px" fontWeight="600">
               Services
             </Text>
-            <Text>Landscape and maintenance service</Text>
-            <Text>Soft scalping and mulching</Text>
-            <Text>Tree pruning</Text>
-            <Text>Rubbish removal</Text>
-            <Text>High pressure cleaning</Text>
-            <Text>Fencing</Text>
-            <Text>Concreting</Text>
-            <Text>Paving</Text>
-            <Text>Retaining wall</Text>
-            <Text>Garden makeover and upgrade</Text>
+            <Text fontSize="14px">Landscape and maintenance service</Text>
+            <Text fontSize="14px">Soft scalping and mulching</Text>
+            <Text fontSize="14px">Tree pruning</Text>
+            <Text fontSize="14px">Rubbish removal</Text>
+            <Text fontSize="14px">High pressure cleaning</Text>
+            <Text fontSize="14px">Fencing</Text>
+            <Text fontSize="14px">Concreting</Text>
+            <Text fontSize="14px">Paving</Text>
+            <Text fontSize="14px">Retaining wall</Text>
+            <Text fontSize="14px">Garden makeover and upgrade</Text>
           </Box>
           <Box flex="1">
             <Text fontSize="20px" fontWeight="600">
               Company
             </Text>
-            <Text>About us</Text>
-            <Text>Services</Text>
-            <Text>Portfolio</Text>
-            <Text>Reviews</Text>
-            <Text>Contact</Text>
-            <Text>Contact</Text>
+            <Text fontSize="14px">About us</Text>
+            <Text fontSize="14px">Services</Text>
+            <Text fontSize="14px">Portfolio</Text>
+            <Text fontSize="14px">Reviews</Text>
+            <Text fontSize="14px">Contact</Text>
+            <Text fontSize="14px">Contact</Text>
           </Box>
         </Flex>
       </Flex>
@@ -106,9 +117,13 @@ const Footer = () => {
       <Image width="100%" marginTop="3%" src={line} />
 
       <Box marginTop="2%">
-        <Flex>
+        <Flex
+          alignItems={{ base: "center", md: "flex-start" }}
+          justifyContent={{ base: "center", md: "flex-start" }}
+          width={{ base: "100%", md: "100%" }}
+        >
           <Image src={copyright} />
-          <Text>
+          <Text fontSize={{ base: "12px", md: "14px" }} textAlign="center">
             2023 seedtime landscape | all right reserved | Privacy policy
           </Text>
         </Flex>
