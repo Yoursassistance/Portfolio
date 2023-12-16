@@ -113,9 +113,12 @@ const ContactUs = () => {
             <AlertDialogOverlay />
 
             {submit ? (
-              <AlertDialogContent marginX="2%" paddingTop={{base: "5%", md: "2%"}}>
+              <AlertDialogContent
+                marginX="2%"
+                paddingTop={{ base: "5%", md: "2%" }}
+              >
                 <Flex flexDirection="column" alignItems="center">
-                  <Image width={{base: "20%", md: "15%"}} src={success} />
+                  <Image width={{ base: "20%", md: "15%" }} src={success} />
                   <AlertDialogHeader textAlign="center">
                     Success
                   </AlertDialogHeader>
@@ -135,9 +138,12 @@ const ContactUs = () => {
                 </Flex>
               </AlertDialogContent>
             ) : (
-              <AlertDialogContent marginX="2%" paddingTop={{base: "5%", md: "2%"}}>
+              <AlertDialogContent
+                marginX="2%"
+                paddingTop={{ base: "5%", md: "2%" }}
+              >
                 <Flex flexDirection="column" alignItems="center">
-                  <Image width={{base: "20%", md: "15%"}} src={caution} />
+                  <Image width={{ base: "20%", md: "15%" }} src={caution} />
                   <AlertDialogHeader textAlign="center">
                     Are you sure you want to submit
                   </AlertDialogHeader>
