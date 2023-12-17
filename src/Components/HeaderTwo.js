@@ -150,7 +150,7 @@ const HeaderTwo = () => {
                   paddingX="6%"
                   fontSize="14px"
                 >
-                  Book an appointment
+                  <NavLink to="/book-appointment">Book an appointment</NavLink>
                 </Button>
               </Box>
             </MenuList>
@@ -187,7 +187,7 @@ const HeaderTwo = () => {
               width="227px"
               float="right"
             >
-              Book an appointment
+              <NavLink to="/book-appointment">Book an appointment</NavLink>
             </Button>
           </Box>
         </Flex>

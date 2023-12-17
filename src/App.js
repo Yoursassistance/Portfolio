@@ -6,6 +6,7 @@ import Service from "./Pages/Service";
 import Portfolio from "./Pages/Portfolio";
 import Reviews from "./Pages/Reviews";
 import ContactUs from "./Pages/ContactUs";
+import BookAppointment from "./Pages/BookAppointment";
 
 
 
@@ -35,6 +36,7 @@ function App() {
           <Route element={<Portfolio />} path="portfolio" />
           <Route element={<Reviews />} path="reviews" />
           <Route element={<ContactUs />} path="contact-us" />
+          <Route element={<BookAppointment />} path="book-appointment" />
         </Routes>
       </Router>
     </ChakraProvider>
