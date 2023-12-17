@@ -8,13 +8,13 @@ import {
   useMediaQuery,
   Spacer,
 } from "@chakra-ui/react";
-import serviceback from "../Assets/Svg/ServiceBackground.svg";
+import serviceback from "../Assets/Png/ServiceBackground.png";
 import Header from "../Components/Header";
 import arrowDown from "../Assets/Svg/arrowDown.svg";
 import Footer from "../Components/Footer";
 import logoC from "../Assets/Svg/logoC.svg";
 import mobileImg from "../Assets/Svg/serviceMobile.svg";
-import ServiceSecOne from "../Components/ServiceSecOne";
+// import ServiceSecOne from "../Components/ServiceSecOne";
 
 const Service = () => {
   const [isMobile] = useMediaQuery("(max-width: 768px)");
