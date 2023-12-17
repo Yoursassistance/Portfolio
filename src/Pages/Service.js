@@ -106,7 +106,7 @@ const Service = () => {
         </Box>
       )}
 
-      <ServiceSecOne />
+      {/* <ServiceSecOne /> */}
 
       <Box
         marginX={{ base: "5%", md: "15%" }}
