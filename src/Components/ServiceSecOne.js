@@ -91,7 +91,7 @@ const ServiceSecOne = () => {
         <ServicePartTwo />
         <ServicePartThree /> */}
 
-        <Flex flexDirection={{ base: "column", md: "row" }} alignItems="center">
+        {/* <Flex flexDirection={{ base: "column", md: "row" }} alignItems="center">
           <Box flex="1">
             <Image src={si9} />
           </Box>
@@ -218,7 +218,7 @@ const ServiceSecOne = () => {
           <Box flex="1" marginLeft={{ base: "0", md: "3%" }}>
             <Image src={si10} />
           </Box>
-        </Flex>
+        </Flex> */}
       </Box>
     </Box>
   );
