@@ -5,7 +5,7 @@ import si9 from "../Assets/Svg/si9.svg";
 import si10 from "../Assets/Svg/si10.svg";
 import ServicePartOne from "./ServicePartOne";
 import ServicePartTwo from "./ServicePartTwo";
-// import ServicePartThree from "./ServicePartThree";
+import ServicePartThree from "./ServicePartThree";
 
 const ServiceSecOne = () => {
   return (
@@ -89,7 +89,7 @@ const ServiceSecOne = () => {
 
         <ServicePartOne />
         <ServicePartTwo />
-        {/* <ServicePartThree /> */}
+        <ServicePartThree />
 
         <Flex flexDirection={{ base: "column", md: "row" }} alignItems="center">
           <Box flex="1">
