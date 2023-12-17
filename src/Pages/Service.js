@@ -22,7 +22,7 @@ const Service = () => {
 
   return (
     <Box backgroundColor="#002D3A">
-      {/* {isMobile ? (
+      {isMobile ? (
         <Box paddingX="3%" paddingTop="2%" color="white">
           <Header />
 
@@ -105,7 +105,7 @@ const Service = () => {
             <Image width="80%" src={arrowDown} />
           </Box>
         </Box>
-      )} */}
+      )}
 
       <ServiceSecOne />
 
