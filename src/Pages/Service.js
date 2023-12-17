@@ -17,11 +17,12 @@ import mobileImg from "../Assets/Svg/serviceMobile.svg";
 // import ServiceSecOne from "../Components/ServiceSecOne";
 
 const Service = () => {
+  console.log('Rendering service component...');
   const [isMobile] = useMediaQuery("(max-width: 768px)");
 
   return (
     <Box backgroundColor="#002D3A">
-      {isMobile ? (
+      {/* {isMobile ? (
         <Box paddingX="3%" paddingTop="2%" color="white">
           <Header />
 
@@ -104,7 +105,7 @@ const Service = () => {
             <Image width="80%" src={arrowDown} />
           </Box>
         </Box>
-      )}
+      )} */}
 
       {/* <ServiceSecOne /> */}
 

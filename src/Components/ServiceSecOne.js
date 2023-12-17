@@ -13,6 +13,7 @@
 // import si10 from "../Assets/Svg/si10.svg";
 
 // const ServiceSecOne = () => {
+//     console.log('Rendering ServiceSecOne component...');
 //   return (
 //     <Box
 //       marginTop={{ base: "10%", md: "0" }}
