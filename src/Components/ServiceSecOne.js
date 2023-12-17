@@ -1,16 +1,16 @@
 import React from "react";
 import { Box, Text, Image, Button, Flex } from "@chakra-ui/react";
-import servicePageImg1 from "../Assets/Svg/servicePageImg1.svg";
+// import servicePageImg1 from "../Assets/Svg/servicePageImg1.svg";
 import si1 from "../Assets/Svg/si1.svg";
 import si2 from "../Assets/Svg/si2.svg";
 import si3 from "../Assets/Svg/si3.svg";
-import si4 from "../Assets/Svg/si4.svg";
-import si5 from "../Assets/Svg/si5.svg";
-import si6 from "../Assets/Svg/si6.svg";
-import si7 from "../Assets/Svg/si7.svg";
-import si8 from "../Assets/Svg/si8.svg";
-import si9 from "../Assets/Svg/si9.svg";
-import si10 from "../Assets/Svg/si10.svg";
+// import si4 from "../Assets/Svg/si4.svg";
+// import si5 from "../Assets/Svg/si5.svg";
+// import si6 from "../Assets/Svg/si6.svg";
+// import si7 from "../Assets/Svg/si7.svg";
+// import si8 from "../Assets/Svg/si8.svg";
+// import si9 from "../Assets/Svg/si9.svg";
+// import si10 from "../Assets/Svg/si10.svg";
 
 const ServiceSecOne = () => {
     console.log('Rendering ServiceSecOne component...');
@@ -31,7 +31,7 @@ const ServiceSecOne = () => {
         </Text>
       </Box>
 
-      <Flex
+      {/* <Flex
         flexDirection={{ base: "column", md: "row" }}
         alignItems="center"
         paddingY="5%"
@@ -79,7 +79,7 @@ const ServiceSecOne = () => {
             </Button>
           </Flex>
         </Box>
-      </Flex>
+      </Flex> */}
 
       <Box
         paddingX={{ base: "0", md: "5%" }}
@@ -273,7 +273,7 @@ const ServiceSecOne = () => {
           </Box>
         </Flex>
 
-        <Flex
+        {/* <Flex
           flexDirection={{ base: "column-reverse", md: "row" }}
           alignItems="center"
           paddingY="5%"
@@ -728,7 +728,7 @@ const ServiceSecOne = () => {
           <Box flex="1" marginLeft={{ base: "0", md: "3%" }}>
             <Image src={si10} />
           </Box>
-        </Flex>
+        </Flex> */}
       </Box>
     </Box>
   );
