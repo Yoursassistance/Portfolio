@@ -14,7 +14,7 @@ import arrowDown from "../Assets/Svg/arrowDown.svg";
 import Footer from "../Components/Footer";
 import logoC from "../Assets/Svg/logoC.svg";
 import mobileImg from "../Assets/Svg/serviceMobile.svg";
-// import ServiceSecOne from "../Components/ServiceSecOne";
+import ServiceSecOne from "../Components/ServiceSecOne";
 
 const Service = () => {
   console.log('Rendering service component...');
@@ -107,7 +107,7 @@ const Service = () => {
         </Box>
       )}
 
-      {/* <ServiceSecOne /> */}
+      <ServiceSecOne />
 
       <Box
         marginX={{ base: "5%", md: "15%" }}
