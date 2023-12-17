@@ -13,7 +13,7 @@ import intoImage from "../Assets/Svg/IntroBackground.svg";
 import arrowDown from "../Assets/Svg/arrowDown.svg";
 import designImage from "../Assets/Svg/designImage.svg";
 import installation from "../Assets/Svg/InstallationImage.svg";
-import care from "../Assets/Svg/careImage.svg";
+import care from "../Assets/Svg/careImage.png";
 import dot from "../Assets/Svg/dot.svg";
 import SeedtimeLandscaping from "../Components/SeedtimeLandscaping";
 import HomeServiceP from "../Components/HomeServiceP";
