@@ -73,7 +73,7 @@ const ServicePartOne = () => {
           </Box>
         </Flex>
 
-        <Flex
+        {/* <Flex
           flexDirection={{ base: "column-reverse", md: "row" }}
           alignItems="center"
           paddingY="5%"
@@ -122,7 +122,7 @@ const ServicePartOne = () => {
           <Box marginLeft={{ base: "0 ", md: "3%" }} flex="1">
             <Image src={si2} />
           </Box>
-        </Flex>
+        </Flex> */}
     </Box>
   )
 }
