@@ -8,7 +8,6 @@ import si10 from "../Assets/Svg/si10.svg";
 // import ServicePartThree from "./ServicePartThree";
 
 const ServiceSecOne = () => {
-  console.log("Rendering ServiceSecOne component...");
   return (
     <Box
       marginTop={{ base: "10%", md: "0" }}
@@ -26,7 +25,7 @@ const ServiceSecOne = () => {
         </Text>
       </Box>
 
-      {/* <Flex
+      <Flex
         flexDirection={{ base: "column", md: "row" }}
         alignItems="center"
         paddingY="5%"
@@ -74,7 +73,7 @@ const ServiceSecOne = () => {
             </Button>
           </Flex>
         </Box>
-      </Flex> */}
+      </Flex>
 
       <Box
         paddingX={{ base: "0", md: "5%" }}
@@ -87,11 +86,12 @@ const ServiceSecOne = () => {
           </Text>
           <Text>Explore our core landscaping services</Text>
         </Box>
+
         {/* <ServicePartOne />
         <ServicePartTwo />
         <ServicePartThree /> */}
 
-        {/* <Flex flexDirection={{ base: "column", md: "row" }} alignItems="center">
+        <Flex flexDirection={{ base: "column", md: "row" }} alignItems="center">
           <Box flex="1">
             <Image src={si9} />
           </Box>
@@ -218,7 +218,7 @@ const ServiceSecOne = () => {
           <Box flex="1" marginLeft={{ base: "0", md: "3%" }}>
             <Image src={si10} />
           </Box>
-        </Flex> */}
+        </Flex>
       </Box>
     </Box>
   );
