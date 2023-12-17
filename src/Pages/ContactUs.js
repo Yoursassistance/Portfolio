@@ -15,8 +15,8 @@ import {
 import React, { useState } from "react";
 import Footer from "../Components/Footer";
 import HeaderTwo from "../Components/HeaderTwo";
-import contactImg1 from "../Assets/Svg/contactImg1.svg";
-import contactImg2 from "../Assets/Svg/contactImg2.svg";
+import contactImg1 from "../Assets/Svg/contactImg1.png";
+import contactImg2 from "../Assets/Svg/contactImg2.png";
 import { useDisclosure } from "@chakra-ui/react";
 import caution from "../Assets/Svg/caution.svg";
 import success from "../Assets/Svg/successIcon.svg";

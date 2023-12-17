@@ -7,9 +7,9 @@ import {
   useMediaQuery,
 } from "@chakra-ui/react";
 import React from "react";
-import landscapeImg1 from "../Assets/Svg/landscapeImg1.svg";
-import landscapeImg2 from "../Assets/Svg/landscapeImg2.svg";
-import landscapeImg3 from "../Assets/Svg/landscapeImg3.svg";
+import landscapeImg1 from "../Assets/Svg/landscapeImg1.png";
+import landscapeImg2 from "../Assets/Svg/landscapeImg2.png";
+import landscapeImg3 from "../Assets/Svg/landscapeImg3.png";
 import dot from "../Assets/Svg/dot.svg";
 
 const SeedtimeLandscaping = () => {

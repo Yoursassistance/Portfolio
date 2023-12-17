@@ -13,7 +13,7 @@ import Header from "../Components/Header";
 import arrowDown from "../Assets/Svg/arrowDown.svg";
 import Footer from "../Components/Footer";
 import logoC from "../Assets/Svg/logoC.svg";
-import mobileImg from "../Assets/Svg/serviceMobile.svg";
+import mobileImg from "../Assets/Svg/serviceMobile.png";
 import ServiceSecOne from "../Components/ServiceSecOne";
 
 const Service = () => {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text, Image, Button, Flex } from "@chakra-ui/react";
-import servicePageImg1 from "../Assets/Svg/servicePageImg1.svg";
+import servicePageImg1 from "../Assets/Svg/servicePageImg1.png";
 import si9 from "../Assets/Svg/si9.svg";
 import si10 from "../Assets/Svg/si10.svg";
 import ServicePartOne from "./ServicePartOne";

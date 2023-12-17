@@ -1,6 +1,6 @@
 import { Box, Text, Flex, Image, Button } from '@chakra-ui/react'
 import React from 'react'
-import si1 from "../Assets/Svg/si1.svg";
+import si1 from "../Assets/Svg/si1.png";
 import si2 from "../Assets/Svg/si2.svg";
 const ServicePartOne = () => {
   return (
@@ -73,7 +73,7 @@ const ServicePartOne = () => {
           </Box>
         </Flex>
 
-        {/* <Flex
+        <Flex
           flexDirection={{ base: "column-reverse", md: "row" }}
           alignItems="center"
           paddingY="5%"
@@ -122,7 +122,7 @@ const ServicePartOne = () => {
           <Box marginLeft={{ base: "0 ", md: "3%" }} flex="1">
             <Image src={si2} />
           </Box>
-        </Flex> */}
+        </Flex>
     </Box>
   )
 }
