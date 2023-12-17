@@ -14,7 +14,7 @@ import arrowDown from "../Assets/Svg/arrowDown.svg";
 import Footer from "../Components/Footer";
 import logoC from "../Assets/Svg/logoC.svg";
 import mobileImg from "../Assets/Svg/serviceMobile.svg";
-import ServiceSecOne from "../Components/ServiceSecOne";
+// import ServiceSecOne from "../Components/ServiceSecOne";
 
 const Service = () => {
   console.log('Rendering service component...');
@@ -30,7 +30,7 @@ const Service = () => {
             <Image width="100%" src={mobileImg} />
           </Flex>
           <Flex flexDirection="column" paddingY="5%">
-            <Text fontSize="28px" fontWeight="600" color="white" width="100%">
+            {/* <Text fontSize="28px" fontWeight="600" color="white" width="100%">
               “Nurturing Nature, Crafting Beauty:
               <span
                 style={{
@@ -42,7 +42,7 @@ const Service = () => {
                 Your Landscape, Our Expertise.
               </span>{" "}
               ”
-            </Text>
+            </Text> */}
             <Text width="90%" fontSize="14px" color="#E0E0E0" marginLeft="7%">
               “Explore our comprehensive landscaping services designed to
               transform your outdoor space into a harmonious masterpiece. From
@@ -80,7 +80,7 @@ const Service = () => {
         >
           <Header />
           <Flex flexDirection="column" paddingY="5%">
-            <Text fontSize="64px" fontWeight="600" color="white" width="60%">
+            {/* <Text fontSize="64px" fontWeight="600" color="white" width="60%">
               “Nurturing Nature, Crafting Beauty:
               <span
                 style={{
@@ -92,7 +92,7 @@ const Service = () => {
                 Your Landscape, Our Expertise.
               </span>{" "}
               ”
-            </Text>
+            </Text> */}
             <Text width="45%" fontSize="20px" color="#E0E0E0" marginLeft="7%">
               “Explore our comprehensive landscaping services designed to
               transform your outdoor space into a harmonious masterpiece. From
@@ -107,7 +107,7 @@ const Service = () => {
         </Box>
       )}
 
-      <ServiceSecOne />
+      {/* <ServiceSecOne /> */}
 
       <Box
         marginX={{ base: "5%", md: "15%" }}
