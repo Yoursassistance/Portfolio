@@ -26,7 +26,7 @@ const ServiceSecOne = () => {
         </Text>
       </Box>
 
-      <Flex
+      {/* <Flex
         flexDirection={{ base: "column", md: "row" }}
         alignItems="center"
         paddingY="5%"
@@ -74,7 +74,7 @@ const ServiceSecOne = () => {
             </Button>
           </Flex>
         </Box>
-      </Flex>
+      </Flex> */}
 
       <Box
         paddingX={{ base: "0", md: "5%" }}
