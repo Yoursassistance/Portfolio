@@ -1,8 +1,8 @@
 import { Box, Text, Flex, Image, Button } from "@chakra-ui/react";
 import React from "react";
 import si3 from "../Assets/Svg/si3.svg";
-import si4 from "../Assets/Svg/si4.svg";
-import si5 from "../Assets/Svg/si5.svg";
+// import si4 from "../Assets/Svg/si4.svg";
+// import si5 from "../Assets/Svg/si5.svg";
 
 const ServicePartTwo = () => {
   return (
@@ -68,7 +68,7 @@ const ServicePartTwo = () => {
         </Box>
       </Flex>
 
-      <Flex
+      {/* <Flex
         flexDirection={{ base: "column-reverse", md: "row" }}
         alignItems="center"
         paddingY="5%"
@@ -189,7 +189,7 @@ const ServicePartTwo = () => {
             Book an inspection
           </Button>
         </Box>
-      </Flex>
+      </Flex> */}
     </Box>
   );
 };
