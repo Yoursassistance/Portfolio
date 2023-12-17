@@ -3,8 +3,8 @@ import { Box, Text, Image, Button, Flex } from "@chakra-ui/react";
 import servicePageImg1 from "../Assets/Svg/servicePageImg1.svg";
 import si9 from "../Assets/Svg/si9.svg";
 import si10 from "../Assets/Svg/si10.svg";
-import ServicePartOne from "./ServicePartOne";
-// import ServicePartTwo from "./ServicePartTwo";
+// import ServicePartOne from "./ServicePartOne";
+import ServicePartTwo from "./ServicePartTwo";
 // import ServicePartThree from "./ServicePartThree";
 
 const ServiceSecOne = () => {
@@ -87,9 +87,9 @@ const ServiceSecOne = () => {
           <Text>Explore our core landscaping services</Text>
         </Box>
 
-        <ServicePartOne />
-        {/* <ServicePartTwo />
-        <ServicePartThree /> */}
+        {/* <ServicePartOne /> */}
+        <ServicePartTwo />
+        {/* <ServicePartThree /> */}
 
         <Flex flexDirection={{ base: "column", md: "row" }} alignItems="center">
           <Box flex="1">
