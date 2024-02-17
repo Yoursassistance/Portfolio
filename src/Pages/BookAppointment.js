@@ -16,8 +16,6 @@ import {
 import React, { useState } from "react";
 import Footer from "../Components/Footer";
 import HeaderTwo from "../Components/HeaderTwo";
-import contactImg1 from "../Assets/Svg/contactImg1.png";
-import contactImg2 from "../Assets/Svg/contactImg2.png";
 import { useDisclosure } from "@chakra-ui/react";
 import caution from "../Assets/Svg/caution.svg";
 import success from "../Assets/Svg/successIcon.svg";
@@ -33,7 +31,7 @@ const BookAppointment = () => {
   return (
     <Box backgroundColor="#002D3A" color="#002D3A">
       <HeaderTwo />
-      <Box marginX="5%" marginY="9%">
+      <Box marginX="5%" marginY="7%">
         <Box
           textAlign="center"
           color="white"

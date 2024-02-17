@@ -3,13 +3,13 @@ import React from "react";
 import Footer from "../Components/Footer";
 import HeaderTwo from "../Components/HeaderTwo";
 import logoC from "../Assets/Svg/logoC.svg";
-import Responsive from "../Utilities/Carousel";
+// import Responsive from "../Utilities/Carousel";
 
 const Reviews = () => {
   return (
     <Box position="relative" backgroundColor="#002D3A" color="white">
       <HeaderTwo />
-      <Box>
+      {/* <Box>
         <Box marginY="5%" textAlign="center">
           <Text fontSize={{ md: "32px", base: "24px" }} fontWeight="600">
             Our Projects Portfolio
@@ -23,7 +23,7 @@ const Reviews = () => {
         <Box>
           <Responsive />
         </Box>
-      </Box>
+      </Box> */}
 
       <Box
         marginX={{ base: "5%", md: "15%" }}

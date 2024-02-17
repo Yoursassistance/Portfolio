@@ -3,6 +3,7 @@ import React from "react";
 import si3 from "../Assets/Svg/si3.svg";
 import si4 from "../Assets/Svg/si4.svg";
 import si5 from "../Assets/Svg/si5.svg";
+import { NavLink } from "react-router-dom";
 
 const ServicePartTwo = () => {
   return (
@@ -63,7 +64,7 @@ const ServicePartTwo = () => {
             fontWeight="400"
             color="white"
           >
-            Book an inspection
+            <NavLink to="/book-appointment">Book an appointment</NavLink>
           </Button>
         </Box>
       </Flex>
@@ -123,7 +124,7 @@ const ServicePartTwo = () => {
             fontWeight="400"
             color="white"
           >
-            Book an inspection
+            <NavLink to="/book-appointment">Book an appointment</NavLink>
           </Button>
         </Box>
         <Box marginLeft={{ md: "3%", base: "0" }} flex="1">
@@ -186,7 +187,7 @@ const ServicePartTwo = () => {
             fontWeight="400"
             color="white"
           >
-            Book an inspection
+             <NavLink to="/book-appointment">Book an appointment</NavLink>
           </Button>
         </Box>
       </Flex>

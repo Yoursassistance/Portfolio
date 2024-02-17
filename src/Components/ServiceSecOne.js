@@ -6,6 +6,7 @@ import si10 from "../Assets/Svg/si10.svg";
 import ServicePartOne from "./ServicePartOne";
 import ServicePartTwo from "./ServicePartTwo";
 import ServicePartThree from "./ServicePartThree";
+import { NavLink } from "react-router-dom";
 
 const ServiceSecOne = () => {
   return (
@@ -69,7 +70,8 @@ const ServiceSecOne = () => {
               paddingY={{ base: "7%", md: "4%" }}
               marginTop="2%"
             >
-              Book and Inspection
+              <NavLink to="/book-appointment">Book an appointment</NavLink>
+             
             </Button>
           </Flex>
         </Box>
@@ -149,7 +151,7 @@ const ServiceSecOne = () => {
               fontWeight="400"
               color="white"
             >
-              Book an inspection
+               <NavLink to="/book-appointment">Book an appointment</NavLink>
             </Button>
           </Box>
         </Flex>
@@ -212,7 +214,7 @@ const ServiceSecOne = () => {
               fontWeight="400"
               color="white"
             >
-              Book an inspection
+               <NavLink to="/book-appointment">Book an appointment</NavLink>
             </Button>
           </Box>
           <Box flex="1" marginLeft={{ base: "0", md: "3%" }}>

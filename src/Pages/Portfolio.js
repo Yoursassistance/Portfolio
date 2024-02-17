@@ -2,24 +2,24 @@ import { Box, Flex, Image, Text, Button } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Footer from "../Components/Footer";
 import HeaderTwo from "../Components/HeaderTwo";
-import data from "../Utilities/data";
+// import data from "../Utilities/data";
 import logoC from "../Assets/Svg/logoC.svg";
-import carretLeft from "../Assets/Svg/carretLeft.svg";
+// import carretLeft from "../Assets/Svg/carretLeft.svg";
 
 const Portfolio = () => {
-  const [selected, isSelected] = useState(false);
+  // const [selected, isSelected] = useState(false);
 
-  const handleProject = () => {
-    isSelected(true);
-  };
+  // const handleProject = () => {
+  //   isSelected(true);
+  // };
 
-  const handleBack = () => {
-    isSelected(false);
-  };
+  // const handleBack = () => {
+  //   isSelected(false);
+  // };
   return (
     <Box backgroundColor="#002D3A" color="white">
       <HeaderTwo />
-      <Box>
+      {/* <Box>
         <Box>
           <Flex
             onClick={handleBack}
@@ -131,7 +131,7 @@ const Portfolio = () => {
                     width={{ base: "100%", md: "505px" }}
                     height={{ base: "178px", md: "309px" }}
                   ></Box>
-                  {/* <Image src={item.image} alt={item.title} /> */}
+                 
                   <Text>{item.title}</Text>
                   <Text>{item.description}</Text>
                 </Box>
@@ -139,7 +139,7 @@ const Portfolio = () => {
             </Flex>
           )}
         </Box>
-      </Box>
+      </Box> */}
 
       <Box
         marginX={{ base: "5%", md: "15%" }}
